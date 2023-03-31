@@ -25,7 +25,8 @@ public class ArrayListUtilities {
         for (int i = 0; i < items.size(); i++){
             if (items.get(i).length() > 5){
                 items.remove(items.get(i));
-            }
+                i--;
+            } 
         }
     }
 }
