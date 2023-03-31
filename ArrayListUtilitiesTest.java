@@ -36,8 +36,19 @@ public class ArrayListUtilitiesTest {
         ArrayList<String> actualOutput;
         
         input = new ArrayList<>(Arrays.asList("coshsad", "adsfsf", "ad"));
-        expectedOutput = 
+        expectedOutput = new ArrayList<>(Arrays.asList("ad"));
         actualOutput = ArrayListUtilities.withoutLongWords(input);
+        assertEquals(expectedOutput, actualOutput);
+
+        input = new ArrayList<>(Arrays.asList("chicken", "fart", "bruh", "ziggy"));
+        expectedOutput = new ArrayList<>(Arrays.asList("fart", "bruh", "ziggy"));
+        actualOutput = ArrayListUtilities.withoutLongWords(input);
+        assertEquals(expectedOutput, actualOutput);
+
+        input = new ArrayList<>(Arrays.asList("coshasdfsdfdsf", "adsfs", "ad"));
+        expectedOutput = new ArrayList<>(Arrays.asList("adsfs", "ad"));
+        actualOutput = ArrayListUtilities.withoutLongWords(input);
+        assertEquals(expectedOutput, actualOutput);
 
 
 
