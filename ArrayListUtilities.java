@@ -14,10 +14,18 @@ public class ArrayListUtilities {
     public static ArrayList<String> withoutLongWords(ArrayList<String> items){
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < items.size(); i++){
-            if (items.get(i).length() < 5){
+            if (items.get(i).length() <= 5){
                 list.add(items.get(i));
             }
         }
         return list;
+    }
+
+    public static void removeLongWords(ArrayList<String> items){
+        for (int i = 0; i < items.size(); i++){
+            if (items.get(i).length() > 5){
+                items.remove(items.get(i));
+            }
+        }
     }
 }
