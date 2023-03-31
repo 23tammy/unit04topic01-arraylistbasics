@@ -17,5 +17,29 @@ public class ArrayListUtilitiesTest {
         expectedOutput = 9;
         actualOutput = ArrayListUtilities.getListMax(input);
         assertEquals(expectedOutput, actualOutput);
+
+        input = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6 ,7, 8, 11));
+        expectedOutput = 11;
+        actualOutput = ArrayListUtilities.getListMax(input);
+        assertEquals(expectedOutput, actualOutput);
+
+        input = new ArrayList<>(Arrays.asList(1000, 10101010));
+        expectedOutput = 10101010;
+        actualOutput = ArrayListUtilities.getListMax(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void withoutLongWords(){
+        ArrayList<String> input;
+        ArrayList<String> expectedOutput;
+        ArrayList<String> actualOutput;
+        
+        input = new ArrayList<>(Arrays.asList("coshsad", "adsfsf", "ad"));
+        expectedOutput = 
+        actualOutput = ArrayListUtilities.withoutLongWords(input);
+
+
+
     }
 }
