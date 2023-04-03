@@ -29,4 +29,22 @@ public class ArrayListUtilities {
             } 
         }
     }
+
+    public static ArrayList<Double> reversed(ArrayList<Double> nums){
+        ArrayList<Double> list = new ArrayList<>();
+        for (int i = nums.size()-1; i >= 0 ; i--){
+            list.add(nums.get(i));
+        }
+        return list;
+    }
+
+    public static void reverseInPlace(ArrayList<Double> nums) {
+        ArrayList<Double> list = new ArrayList<>();
+        for (int i = nums.size()-1; i >= 0 ; i--){
+            list.add(nums.get(i));
+        }
+        for (int i = 0; i < list.size(); i++){
+            nums.set(i, list.get(i));
+        }
+    }
 }
